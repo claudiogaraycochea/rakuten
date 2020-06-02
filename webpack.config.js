@@ -39,9 +39,21 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              sourceMap: true
+              sourceMap: true,
+              url: true,
             }
           }
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
         ],
       },
     ],
