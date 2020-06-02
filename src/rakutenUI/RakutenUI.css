@@ -1,3 +1,15 @@
-body {
+body, html {
   border: 1px solid red;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.row {
+  border: 1px solid red;
+}
+
+.col {
+  border: 2px solid blue;
 }

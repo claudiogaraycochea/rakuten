@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import '../rakutenUI/Normalize.css';
 import '../rakutenUI/RakutenUI.css';
 import Router from '../routes/Router';
 
