@@ -7,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   resolve: {
     extensions: [".js", ".jsx"],
   },
@@ -25,6 +28,20 @@ module.exports = {
           {
             loader: "html-loader",
           },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          }
         ],
       },
     ],
