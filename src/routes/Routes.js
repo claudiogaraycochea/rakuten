@@ -1,6 +1,6 @@
 /* Containers */
 import Home from '../containers/home/Home';
-import Detail from '../containers/movie/detail/Detail';
+import MovieDetail from '../containers/movie/detail/MovieDetail';
 
 /* Layouts */
 import PublicLayout from '../layouts/publicLayout/PublicLayout';
@@ -9,8 +9,8 @@ export const routes = [
   {
     id: 3,
     exact: true,
-    path: '/detail',
-    Component: Detail,
+    path: '/detail:movie_id',
+    Component: MovieDetail,
     Layout: PublicLayout,
     Access: 'Public',
   },
