@@ -35,7 +35,7 @@ const MovieDetail = () => {
               alignItems={'center'}
               justifyContent={'center'}
             >
-              <h1>MOVIE DETAIL</h1>
+              <h1>Dolittle</h1>
             </Col>
           </Row>
           <Row>

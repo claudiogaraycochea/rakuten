@@ -13,7 +13,7 @@ const Home = () => {
       <div>
         {fullData.data.lists.map((list) => {
           return (
-            <div>
+            <div key={list.id}>
               <Row>
                 <Col>
                   <h3>{list.name}</h3>
@@ -23,9 +23,8 @@ const Home = () => {
                 <Col>
                   <div className='artwork-list'>
                     {list.contents.data.map((movie) => {
-                      console.log('data movie: ', movie);
                       return (
-                        <div className='artwork-item'>
+                        <div className='artwork-item' key={movie.id}>
                           <Link to='/movie'>
                             <img src={imagesUI.IMAGE_MOCK_ARTWORK} />
                           </Link>
