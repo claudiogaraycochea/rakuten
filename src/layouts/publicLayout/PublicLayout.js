@@ -14,9 +14,8 @@ class PublicLayout extends Component {
 		return (
 			<div className="main-app">
 				<Header/>
-				<div className='container'>
+				<div className='main-container'>
 					{this.props.children}
-					<Footer/>
 				</div>
 			</div>
 		);

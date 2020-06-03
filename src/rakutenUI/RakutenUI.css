@@ -34,19 +34,11 @@ body, html, .main-app, .app, #app {
 
 /* General Containers */
 
-.container {
+.main-container {
   width: 100%;
   height: calc(100% - 60px);
   margin-top: 60px;
   overflow-x: hidden;
-}
-
-.row {
-	margin-bottom: 20px
-}
-
-.col {
-	margin: 0 20px;
 }
 
 /* Icons */
@@ -95,6 +87,19 @@ body, html, .main-app, .app, #app {
 	margin-left: 10px;
 }
 
+.btn {
+	border: 1px solid red;
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h1 {
+	font-size: 42px;
+}
+
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
@@ -115,7 +120,12 @@ body, html, .main-app, .app, #app {
 @media (min-width: 992px) {
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* Extra large devices (smart tv HD, 1200px and up) */
 
 @media (min-width: 1200px) {
+}
+
+/* Ultra large devices (smart tv Full HD, 1200px and up) */
+
+@media (min-width: 1920px) {
 }

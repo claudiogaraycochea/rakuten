@@ -1,38 +1,45 @@
 import React from "react";
 import Hero from '../../components/hero/Hero';
 import fullData from '../../store/default.json';
-import artworkImage from '../../assets/images/thumbnail.jpeg';
+import { Container, imagesUI, Row, Col} from '../../rakutenUI/RakutenUI';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
   console.log('fullData:', fullData);
   return (
-    <div>
+    <Container>
       <Hero/>
       <div>
         {fullData.data.lists.map((list) => {
           return (
-            <div className='row'>
-              <div className='col'>
-                <div>
+            <div>
+              <Row>
+                <Col>
                   <h3>{list.name}</h3>
-                </div>
-                <div className='artwork-list'>
-                  {list.contents.data.map((movie) => {
-                    console.log('data movie: ', movie);
-                    return (
-                      <div className='artwork-item'>
-                        <img src={artworkImage} />
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <div className='artwork-list'>
+                    {list.contents.data.map((movie) => {
+                      console.log('data movie: ', movie);
+                      return (
+                        <div className='artwork-item'>
+                          <Link to='/movie'>
+                            <img src={imagesUI.IMAGE_MOCK_ARTWORK} />
+                          </Link>
+                        </div>
+                      )
+                    })}
+                  </div>              
+                </Col>
+              </Row>
             </div>
           )
         })}
       </div>
-    </div>
+    </Container>
   );
 };
 

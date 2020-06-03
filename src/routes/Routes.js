@@ -10,7 +10,7 @@ export const routes = [
   {
     id: 3,
     exact: true,
-    path: '/detail',
+    path: '/movie',
     Component: MovieDetail,
     Layout: PublicLayout,
     Access: 'Public',
