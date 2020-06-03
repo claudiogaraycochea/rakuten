@@ -1,11 +1,13 @@
 import React, { Suspense } from 'react';
+import '../rakutenUI/Fonts.css';
+import '../rakutenUI/Normalize.css';
 import '../rakutenUI/RakutenUI.css';
 import Router from '../routes/Router';
 
 function App() {
 	return (
 		<Suspense fallback="loading">
-			<div className='App'>
+			<div className='app'>
 				<Router />
 			</div>
 		</Suspense>

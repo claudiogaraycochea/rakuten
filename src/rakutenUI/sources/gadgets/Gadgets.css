@@ -1,0 +1,19 @@
+.score-wrapper {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffe300;
+  display: flex;
+  align-items: center;
+}
+
+.score-wrapper .icon-score {
+  background-image: url('../../../assets/images/icon-score.svg');
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.score-wrapper span {
+  margin-top: 2px;
+}

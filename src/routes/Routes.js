@@ -1,16 +1,17 @@
 /* Containers */
-import Home from '../containers/home/Home';
-import Detail from '../containers/movie/detail/Detail';
+import ErrorPage from '../containers/errorPage/ErrorPage';
+import Home from '../containers/home/HomeContainer';
+import MovieDetail from '../containers/movie/detail/MovieDetail';
 
 /* Layouts */
-import PublicLayout from '../layouts/publicLayout/PublicLayout';
+import PublicLayout from '../layouts/publicLayout/PublicLayoutContainer';
 
 export const routes = [
   {
     id: 3,
     exact: true,
-    path: '/detail',
-    Component: Detail,
+    path: '/movie',
+    Component: MovieDetail,
     Layout: PublicLayout,
     Access: 'Public',
   },
@@ -26,7 +27,7 @@ export const routes = [
     id: 0,
     exact: true,
     path: '*',
-    Component: Detail,
+    Component: ErrorPage,
     Layout: PublicLayout,
     Access: 'Public',
   },
