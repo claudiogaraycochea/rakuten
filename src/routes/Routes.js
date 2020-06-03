@@ -1,4 +1,5 @@
 /* Containers */
+import ErrorPage from '../containers/errorPage/ErrorPage';
 import Home from '../containers/home/Home';
 import MovieDetail from '../containers/movie/detail/MovieDetail';
 
@@ -9,7 +10,7 @@ export const routes = [
   {
     id: 3,
     exact: true,
-    path: '/detail:movie_id',
+    path: '/movie',
     Component: MovieDetail,
     Layout: PublicLayout,
     Access: 'Public',
@@ -26,7 +27,7 @@ export const routes = [
     id: 0,
     exact: true,
     path: '*',
-    Component: Detail,
+    Component: ErrorPage,
     Layout: PublicLayout,
     Access: 'Public',
   },

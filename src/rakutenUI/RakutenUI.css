@@ -1,15 +1,131 @@
-body, html {
-  border: 1px solid red;
+body, html, .main-app, .app, #app {
   height: 100%;
   box-sizing: border-box;
   background-color: #222222;
   color: #ffffff;
+	overflow: hidden;
+	font-family: NotoSans-Regular,Arial,sans-serif;
+	background-color: #101010;
 }
 
-.row {
-  border: 1px solid red;
+/* Scroll */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
-.col {
-  border: 2px solid blue;
+::-webkit-scrollbar:vertical {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #909090;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #353535;
+}
+
+/* General Containers */
+
+.main-container {
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  overflow-x: hidden;
+}
+
+/* Icons */
+
+[class^="icon-"],
+[class*=" icon-"] {
+	vertical-align: middle;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 32px;
+	height: 32px;
+}
+
+[class^="icon-"].small,
+[class*=" icon-"].small {
+	width: 24px;
+	height: 24px;
+}
+
+[class^="icon-"].space,
+[class*=" icon-"].space {
+	margin-right: 5px;
+}
+
+[class^="icon-"].medium,
+[class*=" icon-"].medium {
+	width: 48px;
+	height: 48px;
+}
+
+[class^="icon-"].large,
+[class*=" icon-"].large {
+	width: 86px;
+	height: 86px;
+}
+
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logo-wrapper .text {
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.btn {
+	border: 1px solid red;
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h1 {
+	font-size: 42px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+	body {
+		font-size: 16px !important;
+	}
+	.box {
+		padding: 20px;
+	}
+	.full-height {
+		height: 99%;
+		box-sizing: border-box;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (smart tv HD, 1200px and up) */
+
+@media (min-width: 1200px) {
+}
+
+/* Ultra large devices (smart tv Full HD, 1200px and up) */
+
+@media (min-width: 1920px) {
 }

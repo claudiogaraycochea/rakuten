@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+
 class PublicLayout extends Component {
 	constructor(props) {
 		super(props);
@@ -9,10 +12,11 @@ class PublicLayout extends Component {
 
 	render() {
 		return (
-			<div>
-				<div>Header</div>
-				{this.props.children}
-				<div>Footer</div>
+			<div className="main-app">
+				<Header/>
+				<div className='main-container'>
+					{this.props.children}
+				</div>
 			</div>
 		);
 	}
