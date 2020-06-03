@@ -1,0 +1,9 @@
+@font-face {
+  font-family: NotoSans-Regular;
+  src: url(https://prod0-kraken-cloudfront.rakuten.tv/fonts/NotoSans-Regular-21f6235482.ttf) format("truetype")
+}
+
+@font-face {
+  font-family: NotoSans-Bold;
+  src: url(https://prod1-kraken-cloudfront.rakuten.tv/fonts/NotoSans-Bold-6a1f7cfe62.ttf) format("truetype")
+}
