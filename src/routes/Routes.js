@@ -1,10 +1,10 @@
 /* Containers */
 import ErrorPage from '../containers/errorPage/ErrorPage';
-import Home from '../containers/home/Home';
+import Home from '../containers/home/HomeContainer';
 import MovieDetail from '../containers/movie/detail/MovieDetail';
 
 /* Layouts */
-import PublicLayout from '../layouts/publicLayout/PublicLayout';
+import PublicLayout from '../layouts/publicLayout/PublicLayoutContainer';
 
 export const routes = [
   {

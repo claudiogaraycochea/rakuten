@@ -1,5 +1,8 @@
+import mockfullData from './../default.json';
+
 const initialState = {
-	movieList: [],
+	queryParams: {},
+	fullData: {},
 	errorMessage: '',
 };
 
@@ -8,7 +11,8 @@ export default function movie(state = initialState, action) {
 		case 'GET_MOVIES':
 			return {
 				...state,
-				movieList: action.movieList,
+				queryParams: action.queryParams,
+				fullData: mockfullData,
 			};
 		case 'GET_MOVIES_ERROR':
 			return {

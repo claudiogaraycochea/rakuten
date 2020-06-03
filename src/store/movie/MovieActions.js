@@ -3,10 +3,10 @@
 // import { API_URL } from '../constants';
 // import { request } from '../../lib/http';
 
-const getMovies = function getMovies(movieList) {
+const getMovies = function getMovies(queryParams) {
 	return {
 		type: 'GET_MOVIES',
-		movieList,
+		queryParams,
 	};
 };
 
@@ -31,5 +31,5 @@ export const getProject = (project_id) => {
 */
 
 export {
-	getMovie,
+	getMovies,
 };
