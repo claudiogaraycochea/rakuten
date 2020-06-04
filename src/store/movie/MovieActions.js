@@ -10,10 +10,10 @@ const getMovies = function getMovies(queryParams) {
 	};
 };
 
-const getMovie = function getMovie(id) {
+const getMovie = function getMovie(movie_id) {
 	return {
 		type: 'GET_MOVIE',
-		id,
+		movie_id,
 	};
 };
 

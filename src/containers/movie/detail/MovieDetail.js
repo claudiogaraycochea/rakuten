@@ -10,7 +10,6 @@ import {
   imagesUI,
 } from '../../../rakutenUI/RakutenUI';
 import ReactPlayer from 'react-player'
-// https://prod-kami.wuaki.tv/v1/delivery/dash/stpeter/6e403063-7091-45c4-8ec1-f83e6b446226.mpd
 
 class MovieDetail extends Component {
   constructor(props) {
@@ -21,8 +20,12 @@ class MovieDetail extends Component {
 		this.handlePlayTrailer = this.handlePlayTrailer.bind(this);
   }
 
+  UNSAFE_componentWillMount() {
+    const { movie_id } = this.props.match.params;
+    this.props.getMovie(movie_id);
+  }
+
   handlePlayTrailer = () => {
-    console.log('playTrailer');
     this.setState({
       showTrailer: !this.state.showTrailer
     });
@@ -30,29 +33,34 @@ class MovieDetail extends Component {
 
   render() {
     const { showTrailer } = this.state;
+    const { movieData } = this.props;
+    
     if (showTrailer) {
-      console.log('showTrailer: ', true);
-      return (
-        <Container>
-          <Section
-            size={100}
-            backgroundImage={imagesUI.IMAGE_MOCK_MOVIE}
-            justifyContent={'flex-end'}
-          >
-            <ReactPlayer 
-              url='https://prod-kami.wuaki.tv/v1/delivery/dash/stpeter/6e403063-7091-45c4-8ec1-f83e6b446226.mpd'
-              playing
-              className='video-fullscreen'
-            />
-            <Button 
-              className={'btn-video-stop'}
-              onPress={()=>this.handlePlayTrailer()}
+      if (movieData.data) {
+        const { stream_infos } = movieData.data;
+        const movieURL = stream_infos[0].url;
+        return (
+          <Container>
+            <Section
+              size={100}
+              backgroundImage={imagesUI.IMAGE_MOCK_MOVIE}
+              justifyContent={'flex-end'}
             >
-              Stop
-            </Button>
-          </Section>
-        </Container>
-      )
+              <ReactPlayer 
+                url={movieURL} 
+                playing
+                className='video-fullscreen'
+              />
+              <Button 
+                className={'btn-video-stop'}
+                onPress={()=>this.handlePlayTrailer()}
+              >
+                Stop
+              </Button>
+            </Section>
+          </Container>
+        )
+      }
     }
     return (
       <Container>

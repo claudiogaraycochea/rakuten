@@ -1,7 +1,7 @@
 /* Containers */
 import ErrorPage from '../containers/errorPage/ErrorPage';
 import Home from '../containers/home/HomeContainer';
-import MovieDetail from '../containers/movie/detail/MovieDetail';
+import MovieDetail from '../containers/movie/detail/MovieDetailContainer';
 import StyleGuide from '../rakutenUI/styleGuide/StyleGuide';
 
 /* Layouts */
