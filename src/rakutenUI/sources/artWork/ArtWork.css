@@ -1,0 +1,9 @@
+.artwork-item {
+  margin-right: 10px;
+  display: block;
+  height: 250px;
+}
+
+.artwork-item img {
+  height: 100%;
+}

@@ -8,7 +8,7 @@ Rakuten UI - Rakuten User Interface Design
     - High concistence at source code for team developers
     - Responsive elements for multiple devices (mobile, tablet, desktop, smarttv, others)
     - Fastest development
-    - List of icons (imagesUI)
+    - List of icons (Icon)
     - List of buttons (Button)
     - List of containers (Section, Row, Col)
 
@@ -17,7 +17,8 @@ Rakuten UI - Rakuten User Interface Design
 import { Container, Section, Row, Col, Box } from './sources/containers/Containers';
 import { Button } from './sources/buttons/Buttons';
 import { Score } from './sources/gadgets/Gadgets';
-import * as imagesUI from '../assets/images';
+import { ArtWork } from './sources/artWork/ArtWork';
+import * as Icon from '../assets/images';
 
 export {
   Container,
@@ -27,5 +28,6 @@ export {
   Box,
   Button,
   Score,
-  imagesUI,
+  ArtWork,
+  Icon,
 };

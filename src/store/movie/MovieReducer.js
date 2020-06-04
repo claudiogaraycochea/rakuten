@@ -1,5 +1,5 @@
-import mockfullData from './../default.json';
-import mockMovieData from './../movie.json';
+import mockfullData from './../mock/default.json';
+import mockMovieData from './../mock/movie.json';
 
 const initialState = {
 	queryParams: {},
