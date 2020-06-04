@@ -1,4 +1,5 @@
 import mockfullData from './../default.json';
+import mockMovieData from './../movie.json';
 
 const initialState = {
 	queryParams: {},
@@ -15,6 +16,17 @@ export default function movie(state = initialState, action) {
 				fullData: mockfullData,
 			};
 		case 'GET_MOVIES_ERROR':
+			return {
+				...state,
+				errorMessage: action.errorMessage,
+			};
+		case 'GET_MOVIE':
+			return {
+				...state,
+				movieId: action.id,
+				movieData: mockMovieData,
+			};
+		case 'GET_MOVIE_ERROR':
 			return {
 				...state,
 				errorMessage: action.errorMessage,

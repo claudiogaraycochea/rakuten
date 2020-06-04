@@ -10,6 +10,13 @@ const getMovies = function getMovies(queryParams) {
 	};
 };
 
+const getMovie = function getMovie(id) {
+	return {
+		type: 'GET_MOVIE',
+		id,
+	};
+};
+
 /*
 
 export const getProject = (project_id) => {
@@ -32,4 +39,5 @@ export const getProject = (project_id) => {
 
 export {
 	getMovies,
+	getMovie,
 };
