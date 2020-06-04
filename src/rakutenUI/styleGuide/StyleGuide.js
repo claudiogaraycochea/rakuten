@@ -6,7 +6,7 @@ import {
   Row,
   Col,
   Button,
-  imagesUI,
+  Icon,
 } from './../RakutenUI';
 
 const StyleGuide = () => {
@@ -105,7 +105,7 @@ const StyleGuide = () => {
         size='60'
         alignItems={'center'}
         justifyContent={'center'}
-        backgroundImage={imagesUI.IMAGE_MOCK_MOVIE}
+        backgroundImage={Icon.IMAGE_MOCK_MOVIE}
       >
         <Row>
           <Col justifyContent={'center'}>
