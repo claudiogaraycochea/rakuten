@@ -3,7 +3,9 @@ import mockMovieData from './../movie.json';
 
 const initialState = {
 	queryParams: {},
+	movie_id: '',
 	fullData: {},
+	movieData: {},
 	errorMessage: '',
 };
 
@@ -23,7 +25,7 @@ export default function movie(state = initialState, action) {
 		case 'GET_MOVIE':
 			return {
 				...state,
-				movieId: action.id,
+				movieId: action.movie_id,
 				movieData: mockMovieData,
 			};
 		case 'GET_MOVIE_ERROR':
