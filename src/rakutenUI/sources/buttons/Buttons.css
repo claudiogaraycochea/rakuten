@@ -14,11 +14,13 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	max-width: 350px;
 }
 
 .btn-primary {
   color: #252525;
-  background-color: #ffe300;
+	background-color: #ffe300;
+	border: 2px solid #ffe300;
 }
 
 .btn-secondary {

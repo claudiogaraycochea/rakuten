@@ -1,6 +1,6 @@
 import React, { Component }from "react";
 import Hero from '../../components/hero/Hero';
-import { Container, imagesUI, Row, Col} from '../../rakutenUI/RakutenUI';
+import { Container, Row, Col} from '../../rakutenUI/RakutenUI';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -23,11 +23,10 @@ class Home extends Component {
                   <Col>
                     <div className='artwork-list'>
                       {list.contents.data.map((movie) => {
-                        console.log('movie.images.artwork: ', movie.images.artwork);
+                        console.log('movie.images.artwork: ', movie);
                         return (
                           <div className='artwork-item' key={movie.id}>
-                            <Link to='/movie'>
-                              {/*<img src={imagesUI.IMAGE_MOCK_ARTWORK} />*/}
+                            <Link to={`/movie`}>
                               <img src={movie.images.artwork} />
                             </Link>
                           </div>
