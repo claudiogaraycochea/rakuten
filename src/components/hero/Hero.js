@@ -1,12 +1,12 @@
 import React from "react";
 import './Hero.css';
-import { Section, imagesUI } from '../../rakutenUI/RakutenUI';
+import { Section, Icon } from '../../rakutenUI/RakutenUI';
 
 const Hero = () => {
   return (
     <Section
       size={70}
-      backgroundImage={imagesUI.IMAGE_MOCK_HERO}
+      backgroundImage={Icon.IMAGE_MOCK_HERO}
     >
     </Section>
   );

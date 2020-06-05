@@ -20,8 +20,7 @@ class PublicLayout extends Component {
 	}
 	
 	render() {
-		const { fullData, children} = this.props;
-		console.log('>>>>> fullData', fullData);
+		const { children} = this.props;
 		return (
 			<div className="main-app">
 				<Header/>

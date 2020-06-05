@@ -7,7 +7,7 @@ import {
   Col,
   Box,
   Score,
-  imagesUI,
+  Icon,
 } from '../../../rakutenUI/RakutenUI';
 import ReactPlayer from 'react-player'
 
@@ -43,7 +43,7 @@ class MovieDetail extends Component {
           <Container>
             <Section
               size={100}
-              backgroundImage={imagesUI.IMAGE_MOCK_MOVIE}
+              backgroundImage={Icon.IMAGE_MOCK_MOVIE}
               justifyContent={'flex-end'}
             >
               <ReactPlayer 
@@ -66,7 +66,7 @@ class MovieDetail extends Component {
       <Container>
         <Section
           size={100}
-          backgroundImage={imagesUI.IMAGE_MOCK_MOVIE}
+          backgroundImage={Icon.IMAGE_MOCK_MOVIE}
           justifyContent={'flex-end'}
         >
           <Box
