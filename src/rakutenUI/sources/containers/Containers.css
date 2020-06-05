@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
 }
 
 .row {
@@ -20,7 +21,6 @@
 
 .col {
   display: flex;
-  flex-direction: column;
 	margin: 0 20px;
 }
 

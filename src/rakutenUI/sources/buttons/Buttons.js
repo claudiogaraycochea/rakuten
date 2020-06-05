@@ -8,6 +8,7 @@ export const Button = (props) => {
     backgroundImage,
     alignItems,
     justifyContent,
+    onPress,
   } = props;
   const styles = {
     height: (size) ? `calc(${size}% - 0px)` : null,
@@ -19,6 +20,7 @@ export const Button = (props) => {
   return (
     <button
       className={`btn ${className}`}
+      onClick={onPress}
     >
       {props.children}
     </button>
