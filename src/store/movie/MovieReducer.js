@@ -6,6 +6,7 @@ const initialState = {
 	movie_id: '',
 	fullData: {},
 	movieData: {},
+	moviesList: {},
 	errorMessage: '',
 };
 
@@ -29,6 +30,16 @@ export default function movie(state = initialState, action) {
 				movieData: mockMovieData,
 			};
 		case 'GET_MOVIE_ERROR':
+			return {
+				...state,
+				errorMessage: action.errorMessage,
+			};
+		case 'GET_MOVIES_LIST':
+			return {
+				...state,
+				moviesList: action.moviesList,
+			};
+		case 'GET_MOVIES_LIST_ERROR':
 			return {
 				...state,
 				errorMessage: action.errorMessage,

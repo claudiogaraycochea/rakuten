@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_URL } from '../store/constants';
+import { API_URL } from '../../store/constants';
 
 export const ContentTypes = {
 	json: 'application/json',

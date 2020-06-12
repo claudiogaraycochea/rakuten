@@ -40,18 +40,17 @@ const StyleGuide = () => {
                   <li>Responsive for multiple devices</li>
                   <li>Support multiple browsers (mobile, tablet, desktop, smart tv, and others)</li>
                   <li>Fastest development (Copy and Paste)</li>
+                  <li>Easy to change new themes</li>
                   <li>List of icons (easy to include icons)</li>
                   <li>List of buttons</li>
                   <li>List of containers</li>
-                  <li>List of containers</li>
-                  <li>Easy to change new themes</li>
                 </ul>
               </Box>
             </Col>
           </Row>
         </Box>
       </Section>
-      <Section size='50'>
+      <Section height='30'>
         <Row>
           <Col justifyContent={'center'}>
             <h2>Buttons</h2>
@@ -72,7 +71,7 @@ const StyleGuide = () => {
           </Col>
         </Row>
       </Section>
-      <Section size='50'>
+      <Section height='40'>
         <Row>
           <Col justifyContent={'center'}>
             <h2>Headers</h2>
