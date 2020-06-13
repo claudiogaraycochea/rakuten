@@ -1,41 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-//import renderer from 'react-test-renderer';
-import { render, unmountComponentAtNode } from "react-dom";
 
-import { act } from "react-dom/test-utils";
-
+import { act } from 'react-dom/test-utils';
 import Header from './Header';
 
-let container = null;
+let container;
 
 beforeEach(() => {
-  // configurar un elemento del DOM como objetivo del renderizado
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // limpieza al salir
-  unmountComponentAtNode(container);
-  container.remove();
+  document.body.removeChild(container);
   container = null;
 });
 
-it("renderiza con o sin nombre", () => {
+it('can render and update a counter', () => {
+  // Prueba la primer renderización y componentDidMount
   act(() => {
-    render(<Header />, container);
+    ReactDOM.render(<Router><Header /></Router>, container);
   });
-  //expect(container.textContent).toBe("Hey, stranger");
+ // const label = container.querySelector('a');
+  //expect('Link').toHaveAttribute('href', '/');
 
+  // Prueba la segunda renderización y componentDidUpdate
   /*act(() => {
-    render(<Hello name="Jenny" />, container);
+    button.dispatchEvent(new MouseEvent('click', {bubbles: true}));
   });
-  expect(container.textContent).toBe("Hello, Jenny!");
-
-  act(() => {
-    render(<Hello name="Margaret" />, container);
-  });
-  expect(container.textContent).toBe("Hello, Margaret!");*/
+  expect(label.textContent).toBe('You clicked 1 times');
+  expect(document.title).toBe('You clicked 1 times');*/
 });
