@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 // import { setDevice } from '../../store/system/SystemActions';
 import { getMovies } from '../../store/movie/MovieActions';
 

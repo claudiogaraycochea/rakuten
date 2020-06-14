@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropType from 'prop-types';
 import {
   Button,
   Container,
@@ -42,7 +43,7 @@ class MovieDetail extends Component {
         return (
           <Container>
             <Section
-              size={100}
+              height={100}
               backgroundImage={Icon.IMAGE_MOCK_MOVIE}
               justifyContent={'flex-end'}
             >
@@ -65,7 +66,7 @@ class MovieDetail extends Component {
     return (
       <Container>
         <Section
-          size={100}
+          height={100}
           backgroundImage={Icon.IMAGE_MOCK_MOVIE}
           justifyContent={'flex-end'}
         >
@@ -113,13 +114,27 @@ class MovieDetail extends Component {
           </Row>
         </Section>
         <Section
-          size={40}
+          height={40}
         >
           More content
         </Section>  
       </Container>
     );    
   }
+};
+
+MovieDetail.propTypes = {
+  getMovie: PropType.func,
+	match: PropType.object.isRequired,
+};
+
+MovieDetail.defaultProps = {
+  getMovie: () => null,
+	match: {
+    params: {
+      movie_id: null,
+    }
+  },
 };
 
 export default MovieDetail;
