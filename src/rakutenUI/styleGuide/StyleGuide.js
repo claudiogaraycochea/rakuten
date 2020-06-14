@@ -13,7 +13,7 @@ const StyleGuide = () => {
   return (
     <Container>
       <Section
-        size='100'
+        height='100'
         justifyContent={'center'}
       >
         <Box>
@@ -101,7 +101,7 @@ const StyleGuide = () => {
         </Box>
       </Section>
       <Section
-        size='60'
+        height='60'
         alignItems={'center'}
         justifyContent={'center'}
         backgroundImage={Icon.IMAGE_MOCK_MOVIE}

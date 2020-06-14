@@ -20,7 +20,7 @@ const Header = () => {
           </Link>
         </div>
         <div className='nav-item'>
-          <Link href=''>
+          <Link to=''>
             TV SERIES
           </Link>
         </div>
