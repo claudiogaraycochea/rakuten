@@ -1,43 +1,36 @@
-// import axios from 'axios';
+import { API_URL } from '../constants';
+import { request } from '../../libs/apiCall/ApiCall';
 
-// import { API_URL } from '../constants';
-// import { request } from '../../lib/http';
-
-const getMovies = function getMovies(queryParams) {
+export const getMovies = function getMovies(queryParams) {
 	return {
 		type: 'GET_MOVIES',
 		queryParams,
 	};
 };
 
-const getMovie = function getMovie(movie_id) {
+export const getMovie = function getMovie(movie_id) {
 	return {
 		type: 'GET_MOVIE',
 		movie_id,
 	};
 };
 
-/*
-
-export const getProject = (project_id) => {
-	return async (dispatch) => {
-		try {
-			const { data } = await request('GET', `/projects/${project_id}`);
-			dispatch({
-				type: 'GET_PROJECT_INFO',
-				projectInfo: data,
+export const getMoviesList = () => {
+	const link = '/lists/estrenos-imprescindibles-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es';
+	const params = {};
+	return (dispatch) => {
+		axios.GET(`${API_URL}${link}`, params)
+			.then((response) => {
+				dispatch({
+					type: 'GET_MOVIES_LIST',
+					moviesList: response.data,
+				});
+			})
+			.catch((error) => {
+				dispatch({
+					type: 'GET_MOVIES_LIST_ERROR',
+					errorMessage: error,
+				});
 			});
-		} catch (error) {
-			dispatch({
-				type: 'GET_PROJECT_INFO_ERROR',
-				errorMessage: error,
-			});
-		}
 	};
-};
-*/
-
-export {
-	getMovies,
-	getMovie,
 };

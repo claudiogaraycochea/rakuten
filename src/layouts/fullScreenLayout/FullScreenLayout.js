@@ -8,10 +8,6 @@ class PublicLayout extends Component {
 		super(props);
 		this.state = {};
 	}
-
-	UNSAFE_componentWillMount() {
-		// this.props.getMovies();
-	}
 	
 	render() {
 		return (

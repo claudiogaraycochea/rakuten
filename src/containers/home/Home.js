@@ -1,4 +1,5 @@
 import React, { Component }from "react";
+import PropType from 'prop-types';
 import { Container } from '../../rakutenUI/RakutenUI';
 import Hero from '../../components/hero/Hero';
 import MovieList from '../../components/movie/moviesList/MoviesList';
@@ -18,7 +19,14 @@ class Home extends Component {
       </Container>
     );
   }
+};
 
+Home.propTypes = {
+	fullData: PropType.object.isRequired,
+};
+
+Home.defaultProps = {
+	fullData: {},
 };
 
 export default Home;
