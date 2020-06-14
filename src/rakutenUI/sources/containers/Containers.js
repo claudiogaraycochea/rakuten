@@ -15,7 +15,7 @@ export const Container = (props) => {
 
 export const Section = (props) => {
   const {
-    size,
+    height,
     className,
     backgroundImage,
     alignItems,
@@ -23,7 +23,7 @@ export const Section = (props) => {
     children,
   } = props;
   const styles = {
-    height: (size) ? `${size}%` : null,
+    height: (height) ? `${height}%` : null,
     backgroundImage: `url(${backgroundImage})`,
     alignItems: (alignItems) ? `${alignItems}` : null,
     flex: 1,
@@ -52,14 +52,14 @@ export const Row = (props) => {
 
 export const Col = (props) => {
   const {
-    size,
+    height,
     backgroundImage,
     alignItems,
     justifyContent,
     children,
   } = props;
   const styles = {
-    height: (size) ? `${size}%` : null,
+    height: (height) ? `${height}%` : null,
     backgroundImage: `url(${backgroundImage})`,
     alignItems: (alignItems) ? `${alignItems}` : null,
     flex: 1,
