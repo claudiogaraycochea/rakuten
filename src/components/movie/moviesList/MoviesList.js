@@ -1,8 +1,9 @@
 import React from "react";
+import PropType from 'prop-types';
 import { Row, Col, ArtWork } from '../../../rakutenUI/RakutenUI';
 import './MoviesList.css';
 
-const MovieList = (props) => {
+const MoviesList = (props) => {
   const { list } = props;
   return (
     <div>
@@ -24,4 +25,12 @@ const MovieList = (props) => {
   );
 };
 
-export default MovieList;
+MoviesList.propTypes = {
+	list: PropType.object.isRequired,
+};
+
+MoviesList.defaultProps = {
+	list: {},
+};
+
+export default MoviesList;
